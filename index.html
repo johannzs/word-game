@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Mots - Défi du Personnage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Écran Titre -->
+    <div class="title-screen" id="titleScreen">
+        <div class="title-content">
+            <div class="title-unicorn">🦄</div>
+            <h1 class="title-heading">Sauve la Licorne !</h1>
+            <div class="rules-container">
+                <h2>Règles du jeu</h2>
+                <ul class="rules-list">
+                    <li><strong>🎯 Objectif :</strong> Devinez 5 mots à partir des indices pour sauver la licorne !</li>
+                    <li><strong>💡 Indices :</strong> Chaque mot a plusieurs indices. Cliquez sur "Autre indice" pour en voir un différent.</li>
+                    <li><strong>❤️ Vies :</strong> Vous avez 3 vies. Vous perdez une vie si vous validez un mauvais mot ou si le temps s'écoule.</li>
+                    <li><strong>⏱️ Timer :</strong> 30 secondes par mot. Attention au temps !</li>
+                    <li><strong>⏭️ Passer :</strong> Vous pouvez passer jusqu'à 5 mots (ils sont perdus définitivement).</li>
+                    <li><strong>🦄 Licorne :</strong> Elle se décompose à chaque vie perdue. Sauvez-la avant qu'il ne soit trop tard !</li>
+                </ul>
+                <div class="win-lose">
+                    <p><strong>✅ Victoire :</strong> Trouvez 5 mots</p>
+                    <p><strong>❌ Défaite :</strong> Perdez vos 3 vies ou plus de mots disponibles</p>
+                </div>
+            </div>
+            <button id="startGameBtn" class="btn btn-start">Commencer le jeu</button>
+        </div>
+    </div>
+
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <!-- Header avec vies et score -->
+        <header class="game-header">
+            <div class="hearts" id="hearts">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+            <div class="score-display">
+                Mots trouvés : <span id="foundCount">0</span>/5
+            </div>
+        </header>
+
+        <!-- Zone de jeu principale -->
+        <main class="game-main">
+            <!-- Colonne gauche : Méchant + Indice -->
+            <div class="left-column">
+                <div class="villain-container">
+                    <div class="villain" id="villain"></div>
+                </div>
+                <div class="hint-box">
+                    <div class="hint-label">Indice : <span class="current-hint" id="currentHint">Chargement...</span></div>
+                    <div class="hint-footer">
+                        <span class="hint-counter" id="hintCounter">Indice : 1/4</span>
+                        <button id="changeHintBtn" class="btn-pixel">🔄</button>
+                    </div>
+                </div>
+                <button id="passBtn" class="btn-pixel btn-pass">PASSER</button>
+            </div>
+
+            <!-- Colonne centrale : Bulle de dialogue -->
+            <div class="center-column">
+                <div class="speech-bubble" id="speechBubble">
+                    <div class="bubble-text" id="message">Tu ne trouveras pas !</div>
+                    <div class="bubble-timer">il te reste <span id="timer">30</span> sec</div>
+                </div>
+            </div>
+
+            <!-- Colonne droite : Licorne + Input -->
+            <div class="right-column">
+                <div class="unicorn-container-wrapper">
+                    <div class="character" id="character">
+                        <div class="character-state" id="characterState">
+                            <div class="unicorn-container state-0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="wordInput" placeholder="Tape ta réponse ..." maxlength="20">
+                </div>
+                <button id="validateBtn" class="btn-pixel btn-validate">VALIDER</button>
+            </div>
+        </main>
+
+        <!-- Modal Game Over -->
+        <div class="game-over-modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Partie terminée</h2>
+                <p id="gameOverMessage"></p>
+                <button id="restartBtn" class="btn-pixel">Rejouer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

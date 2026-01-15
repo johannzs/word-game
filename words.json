@@ -1,0 +1,229 @@
+{
+    "wordLists": [
+        {
+            "name": "Vie quotidienne",
+            "words": [
+                {
+                    "word": "miroir",
+                    "hints": ["Il renvoie ton reflet sans te juger", "Surface où Narcisse s'est perdu", "Les vampires l'évitent", "Objet brisé = 7 ans de malheur"]
+                },
+                {
+                    "word": "escalier",
+                    "hints": ["Monte ou descend selon ton humeur", "Succession de marches", "L'ascenseur l'a rendu paresseux", "On peut le rater et tomber"]
+                },
+                {
+                    "word": "parapluie",
+                    "hints": ["Protège de ce qui tombe du ciel", "Mary Poppins s'en sert pour voler", "S'ouvre quand le temps se gâte", "Souvent oublié au restaurant"]
+                },
+                {
+                    "word": "horloge",
+                    "hints": ["Elle compte sans jamais s'arrêter", "Tic-tac fait son cœur", "Grand-père en avait une grande", "Cendrillon la redoutait à minuit"]
+                },
+                {
+                    "word": "coussin",
+                    "hints": ["Support moelleux pour la tête", "Arme favorite des batailles d'enfants", "Rembourré de plumes ou mousse", "Décore le canapé"]
+                },
+                {
+                    "word": "rideau",
+                    "hints": ["Cache ce qui se passe derrière", "S'ouvre au théâtre", "Bloque la lumière du jour", "Pend devant la fenêtre"]
+                },
+                {
+                    "word": "bougie",
+                    "hints": ["Éclaire quand le courant coupe", "On souffle dessus pour un vœu", "Faite de cire", "Romantique sur une table"]
+                },
+                {
+                    "word": "ciseaux",
+                    "hints": ["Deux lames qui se croisent", "Pierre les bat", "Coupe mais ne tranche pas", "Outil du coiffeur"]
+                },
+                {
+                    "word": "balcon",
+                    "hints": ["Roméo parlait à Juliette depuis en bas", "Petite terrasse en hauteur", "Vue sur la rue", "Prolongement extérieur d'un étage"]
+                },
+                {
+                    "word": "tiroir",
+                    "hints": ["Cache les secrets des bureaux", "On le pousse et on le tire", "Rangement coulissant", "Souvent en désordre"]
+                }
+            ]
+        },
+        {
+            "name": "Nature et animaux",
+            "words": [
+                {
+                    "word": "papillon",
+                    "hints": ["Ancienne chenille devenue belle", "Ses ailes sont couvertes d'écailles", "Effet chaotique porte son nom", "Butine les fleurs en silence"]
+                },
+                {
+                    "word": "ecureuil",
+                    "hints": ["Cache ses provisions pour l'hiver", "Queue touffue et rousse", "Acrobate des branches", "Amateur de noisettes"]
+                },
+                {
+                    "word": "cascade",
+                    "hints": ["L'eau y fait une chute spectaculaire", "Niagara en est une célèbre", "Bruit assourdissant de nature", "Rivière qui tombe dans le vide"]
+                },
+                {
+                    "word": "brouillard",
+                    "hints": ["Nuage tombé au sol", "Rend la route dangereuse", "Londres en était célèbre", "Réduit la visibilité à néant"]
+                },
+                {
+                    "word": "colibri",
+                    "hints": ["Plus petit oiseau du monde", "Bat des ailes 80 fois par seconde", "Peut voler en arrière", "Bec fin comme une aiguille"]
+                },
+                {
+                    "word": "corail",
+                    "hints": ["Animal qui ressemble à une plante", "Construit des récifs sous-marins", "Blanchit quand l'océan chauffe", "Abrite Nemo et ses amis"]
+                },
+                {
+                    "word": "hibou",
+                    "hints": ["Chasse la nuit, dort le jour", "Tourne la tête à 270 degrés", "Hulule dans la forêt", "Symbole de sagesse"]
+                },
+                {
+                    "word": "volcan",
+                    "hints": ["Montagne qui crache du feu", "Pompéi en a subi les conséquences", "Lave en fusion à l'intérieur", "Peut être actif ou endormi"]
+                },
+                {
+                    "word": "renard",
+                    "hints": ["Rusé selon les fables", "Pelage roux et queue blanche", "Le Petit Prince en a apprivoisé un", "Goupil est son ancien nom"]
+                },
+                {
+                    "word": "aurore",
+                    "hints": ["Lumière qui précède le lever du soleil", "Boréale au nord, australe au sud", "Princesse Disney endormie", "Moment où le ciel rosit"]
+                }
+            ]
+        },
+        {
+            "name": "Art et culture",
+            "words": [
+                {
+                    "word": "symphonie",
+                    "hints": ["Beethoven en a composé neuf", "Orchestre au complet", "Œuvre musicale en plusieurs mouvements", "La 5ème commence par pom pom pom pom"]
+                },
+                {
+                    "word": "sculpture",
+                    "hints": ["Art en trois dimensions", "David de Michel-Ange en est une", "Taillée dans la pierre ou le bois", "Le Penseur de Rodin"]
+                },
+                {
+                    "word": "aquarelle",
+                    "hints": ["Peinture diluée à l'eau", "Technique transparente et légère", "Pigments sur papier mouillé", "Monet l'utilisait souvent"]
+                },
+                {
+                    "word": "chapitre",
+                    "hints": ["Division d'un livre", "Tourne la page pour le suivant", "Numéroté en chiffres romains parfois", "Partie d'une histoire"]
+                },
+                {
+                    "word": "melodie",
+                    "hints": ["Suite de notes qui reste en tête", "Air qu'on fredonne", "Composante horizontale de la musique", "Sans elle, pas de chanson"]
+                },
+                {
+                    "word": "portrait",
+                    "hints": ["Représentation d'un visage", "Mona Lisa en est un célèbre", "Le peintre fixe son modèle", "Photo d'identité artistique"]
+                },
+                {
+                    "word": "theatre",
+                    "hints": ["Les planches où jouent les acteurs", "Molière y régnait", "Tragédie ou comédie", "Le rideau s'y lève"]
+                },
+                {
+                    "word": "poesie",
+                    "hints": ["Art des vers et des rimes", "Baudelaire en était maître", "Alexandrins et sonnets", "Les mots y dansent"]
+                },
+                {
+                    "word": "fresque",
+                    "hints": ["Peinture murale monumentale", "Chapelle Sixtine en est couverte", "Peinte sur enduit frais", "Décore les plafonds des églises"]
+                },
+                {
+                    "word": "opera",
+                    "hints": ["Chant lyrique et dramatique", "Carmen en est un célèbre", "Les divas y brillent", "Musique + théâtre + décors"]
+                }
+            ]
+        },
+        {
+            "name": "Science et technologie",
+            "words": [
+                {
+                    "word": "satellite",
+                    "hints": ["Tourne autour d'une planète", "La Lune en est un naturel", "GPS grâce à lui", "Orbite dans l'espace"]
+                },
+                {
+                    "word": "molecule",
+                    "hints": ["Assemblage d'atomes", "H2O en est une célèbre", "Brique de la matière", "Invisible à l'œil nu"]
+                },
+                {
+                    "word": "telescope",
+                    "hints": ["Observe les étoiles lointaines", "Hubble en est un spatial", "Galilée l'a perfectionné", "Grossit l'infiniment grand"]
+                },
+                {
+                    "word": "bacterie",
+                    "hints": ["Micro-organisme unicellulaire", "Certaines sont utiles au yaourt", "Antibiotiques les combattent", "Invisible sans microscope"]
+                },
+                {
+                    "word": "algorithme",
+                    "hints": ["Recette pour ordinateur", "Suite d'instructions logiques", "Google en utilise pour chercher", "Base de l'intelligence artificielle"]
+                },
+                {
+                    "word": "gravite",
+                    "hints": ["Newton et sa pomme", "Force qui nous garde au sol", "La Lune nous attire aussi", "Absente dans l'espace"]
+                },
+                {
+                    "word": "oxygene",
+                    "hints": ["Gaz vital pour respirer", "21% de l'air", "Les arbres le produisent", "Symbole O dans le tableau"]
+                },
+                {
+                    "word": "eclipse",
+                    "hints": ["Quand un astre en cache un autre", "Solaire ou lunaire", "Moment rare et spectaculaire", "Ne pas regarder sans protection"]
+                },
+                {
+                    "word": "fossile",
+                    "hints": ["Trace de vie ancienne dans la roche", "Les dinosaures en ont laissé", "Pétrole en vient", "Témoin du passé"]
+                },
+                {
+                    "word": "cristal",
+                    "hints": ["Structure atomique ordonnée", "Le quartz en est un", "Transparent et géométrique", "Boule de voyante"]
+                }
+            ]
+        },
+        {
+            "name": "Gastronomie",
+            "words": [
+                {
+                    "word": "croissant",
+                    "hints": ["Viennoiserie en forme de lune", "Petit-déjeuner français typique", "Pâte feuilletée beurrée", "Accompagne le café"]
+                },
+                {
+                    "word": "chocolat",
+                    "hints": ["Noir, blanc ou au lait", "Vient du cacao", "Pâques et Noël en regorgent", "Suisse et Belgique excellent"]
+                },
+                {
+                    "word": "brioche",
+                    "hints": ["Pain enrichi au beurre et œufs", "Marie-Antoinette suggérait d'en manger", "Moelleuse et dorée", "Souvent tressée"]
+                },
+                {
+                    "word": "omelette",
+                    "hints": ["Œufs battus et cuits à la poêle", "On ne la fait pas sans casser", "Peut être aux fines herbes", "Plat simple et rapide"]
+                },
+                {
+                    "word": "gratin",
+                    "hints": ["Croûte dorée au four", "Dauphinois est le plus célèbre", "Fromage fondu dessus", "Croustillant sur le dessus"]
+                },
+                {
+                    "word": "potage",
+                    "hints": ["Soupe épaisse de légumes", "Se mange à la cuillère", "Réchauffe en hiver", "Mixé et onctueux"]
+                },
+                {
+                    "word": "macaron",
+                    "hints": ["Deux coques et une ganache", "Ladurée les a rendus célèbres", "Coloré et délicat", "Spécialité parisienne"]
+                },
+                {
+                    "word": "tartine",
+                    "hints": ["Tranche de pain garnie", "Beurre et confiture classique", "Petit-déjeuner simple", "Peut tomber côté beurre"]
+                },
+                {
+                    "word": "bouillon",
+                    "hints": ["Eau de cuisson parfumée", "Base des soupes", "Poule ou bœuf", "Cube déshydraté"]
+                },
+                {
+                    "word": "caramel",
+                    "hints": ["Sucre cuit jusqu'à brunir", "Beurre salé en Bretagne", "Couleur entre or et brun", "Colle aux dents"]
+                }
+            ]
+        }
+    ]
+}
