@@ -159,6 +159,7 @@ body {
     align-items: end;
     min-height: 420px;
     padding-bottom: 0;
+    position: relative;
 }
 
 /* Colonne gauche - Méchant */
@@ -166,17 +167,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     gap: 0.3rem;
     padding-bottom: 10px;
+    position: relative;
+    align-self: stretch;
 }
 
 .villain-container {
     background: transparent;
     padding: 0;
-    min-height: 180px;
+    height: 180px;
+    width: 150px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    position: absolute;
+    bottom: 160px;
+    left: 80px;
+    z-index: 1;
 }
 
 .villain {
@@ -197,6 +206,9 @@ body {
     padding: 0.6rem;
     width: 100%;
     color: #000;
+    min-height: 70px;
+    position: relative;
+    z-index: 10;
 }
 
 .hint-box .hint-label {
@@ -244,7 +256,7 @@ body {
 .speech-bubble::before {
     content: '';
     position: absolute;
-    left: -15px;
+    left: -18px;
     top: 20px;
     border: 8px solid transparent;
     border-right-color: #333;
@@ -253,7 +265,7 @@ body {
 .speech-bubble::after {
     content: '';
     position: absolute;
-    left: -9px;
+    left: -12px;
     top: 23px;
     border: 5px solid transparent;
     border-right-color: rgba(232, 232, 232, 0.95);
@@ -268,6 +280,18 @@ body {
 .bubble-timer {
     font-size: 0.7rem;
     color: #666;
+}
+
+.bubble-timer.bubble-success {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.bubble-timer.bubble-error {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 0.7rem;
 }
 
 /* Colonne droite - Licorne */
@@ -311,48 +335,78 @@ body {
     justify-content: center;
 }
 
-.unicorn-container::before {
-    content: '';
+/* Canvas de la licorne */
+#unicornCanvas {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    background-image: url('images/licorne-pixel.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     filter: drop-shadow(3px 3px 0px #000);
     image-rendering: pixelated;
 }
 
-/* États de la licorne - effet visuel de dégradation */
-.unicorn-container.state-0::before {
+/* Container pour les fragments */
+.shatter-container {
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    pointer-events: none;
+    overflow: visible;
+}
+
+
+/* Fragment de base */
+.shard {
+    position: absolute;
+    background-image: url('images/licorne-pixel.png');
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
     opacity: 1;
+    transition: none;
 }
 
-.unicorn-container.state-1::before {
-    opacity: 0.9;
-    filter: drop-shadow(3px 3px 0px #000) hue-rotate(10deg);
+/* Animation de chute des fragments */
+.shard.falling {
+    animation: shardFall 0.6s ease-in forwards;
 }
 
-.unicorn-container.state-2::before {
-    opacity: 0.8;
-    filter: drop-shadow(3px 3px 0px #000) hue-rotate(20deg) saturate(0.8);
+@keyframes shardFall {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--fall-x), var(--fall-y)) rotate(var(--fall-rotate));
+        opacity: 0;
+    }
 }
 
-.unicorn-container.state-3::before {
-    opacity: 0.7;
-    filter: drop-shadow(3px 3px 0px #000) hue-rotate(30deg) saturate(0.6);
+/* Effet de crack/fissure sur l'image */
+.unicorn-container.cracked::before {
+    filter: drop-shadow(3px 3px 0px #000) brightness(0.9);
 }
 
-.unicorn-container.state-4::before {
-    opacity: 0.6;
-    filter: drop-shadow(3px 3px 0px #000) grayscale(0.5);
+.unicorn-container.cracked::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(255,255,255,0.3) 45%,
+        transparent 50%
+    );
+    pointer-events: none;
+    animation: crackFlash 0.3s ease-out;
 }
 
-.unicorn-container.state-5::before {
-    opacity: 0.4;
-    filter: drop-shadow(3px 3px 0px #000) grayscale(1);
-    transform: rotate(90deg);
+@keyframes crackFlash {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* État final - licorne détruite */
+.unicorn-container.destroyed::before {
+    opacity: 0;
 }
 
 /* Input box */
@@ -467,6 +521,70 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: 2px solid #4a7a8a;
+    overflow: hidden;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast.error {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.9);
+}
+
+.toast.info {
+    border-color: #3498db;
+    background: rgba(52, 152, 219, 0.9);
+}
+
+/* Barre de progression du toast */
+.toast-progress {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.toast.show .toast-progress {
+    animation: toastProgress 2.5s linear forwards;
+}
+
+@keyframes toastProgress {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+
+/* Animation shake pour le champ de saisie */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.input-box.shake input {
+    animation: shake 0.5s ease;
+    border-color: #e74c3c !important;
 }
 
 @media (max-width: 768px) {
